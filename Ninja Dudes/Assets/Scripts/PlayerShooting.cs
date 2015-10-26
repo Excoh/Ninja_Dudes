@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using XboxCtrlrInput;
 
 public class PlayerShooting : MonoBehaviour {
 
@@ -21,6 +22,13 @@ public class PlayerShooting : MonoBehaviour {
         //If enough time has past, player can shoot again.
         if (timeStamp <= Time.time)
         {
+            //Xbox Controller (works with all players)
+            if(XCI.GetButton(XboxButton.A, PlayerNumber))
+            {
+                fire();
+            }
+
+            //Debug mode
             if (PlayerNumber == 1)
             {
                 if (Input.GetButtonDown("Player1Fire"))
@@ -35,6 +43,20 @@ public class PlayerShooting : MonoBehaviour {
                     fire();
                 }
             }
+            if (PlayerNumber == 3)
+            {
+                if (Input.GetButtonDown("Player3Fire"))
+                {
+                    fire();
+                }
+            }
+            if (PlayerNumber == 4)
+            {
+                if (Input.GetButtonDown("Player4Fire"))
+                {
+                    fire();
+                }
+            }
         }
     }
 
@@ -45,6 +67,7 @@ public class PlayerShooting : MonoBehaviour {
         GameObject projectile_clone;
 
         projectile_clone = Instantiate(projectile, muzzle.transform.position, muzzle.transform.rotation) as GameObject;
+        projectile.GetComponent<bulletScript>().playerNumber = PlayerNumber;
         projectile_clone.transform.parent = this.gameObject.transform;
 
         //retrieve the direction of the player

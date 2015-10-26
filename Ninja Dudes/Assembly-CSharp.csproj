@@ -6,7 +6,7 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 	<RootNamespace></RootNamespace>
-	<ProjectGuid>{D20E8384-9DC9-037B-77E3-2EB3FFC97EC4}</ProjectGuid>
+	<ProjectGuid>{E4242D11-0FDC-4CF9-61E7-10BB503C0ECC}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<AssemblyName>Assembly-CSharp</AssemblyName>
@@ -45,28 +45,37 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\MusicSingleton.cs" />
      <Compile Include="Assets\Scripts\FieldOfView2D\Scripts\FOV2DEyes.cs" />
      <Compile Include="Assets\Scripts\FieldOfView2D\Scripts\FOV2DVisionCone.cs" />
      <Compile Include="Assets\Scripts\FieldOfView2D\Scripts\SampleScript\GuardSample.cs" />
      <Compile Include="Assets\Scripts\FoV2DConeMod.cs" />
      <Compile Include="Assets\Scripts\FoV2DEyesMod.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GuardMovementPath.cs" />
      <Compile Include="Assets\Scripts\GuardSight.cs" />
+     <Compile Include="Assets\Scripts\LevelLoader.cs" />
+     <Compile Include="Assets\Scripts\MatchStarter.cs" />
      <Compile Include="Assets\Scripts\PlayerLife.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\PlayerScore1Manager.cs" />
+     <Compile Include="Assets\Scripts\PlayerScore2Manager.cs" />
+     <Compile Include="Assets\Scripts\PlayerScore3Manager.cs" />
+     <Compile Include="Assets\Scripts\PlayerScore4Manager.cs" />
+     <Compile Include="Assets\Scripts\PlayerSelect.cs" />
      <Compile Include="Assets\Scripts\PlayerShooting.cs" />
      <Compile Include="Assets\Scripts\bulletScript.cs" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
+     <Compile Include="Assets\Xbox Controller Plugin\XboxCtrlrInput\Example\Test Level Scripts\MoveLaser.cs" />
+     <Compile Include="Assets\Xbox Controller Plugin\XboxCtrlrInput\Example\Test Level Scripts\MovePlayer.cs" />
+     <Compile Include="Assets\Xbox Controller Plugin\XboxCtrlrInput\XboxCtrlrInput.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <Reference Include="XInputDotNetPure">
+ <HintPath>C:/Users/Eric/Documents/GitHub/Ninja_Dudes/Ninja Dudes/Assets/Xbox Controller Plugin/Plugins/x86_64/XInputDotNetPure.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>D:/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>

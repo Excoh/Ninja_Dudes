@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using XboxCtrlrInput;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -31,6 +32,37 @@ public class PlayerMovement : MonoBehaviour {
         //Used to determine the rotation of the sprite.
 		Vector3 _origPos = transform.position;
 
+        //Xbox Controller (works with all players)
+        if (XCI.GetDPad(XboxDPad.Up, PlayerNumber) && canMove[2])
+        {
+            transform.position += new Vector3(0, 1, 0) * speed * Time.deltaTime;
+            canMove[0] = true;
+            canMove[1] = true;
+            canMove[3] = true;
+        }
+        else if (XCI.GetDPad(XboxDPad.Down, PlayerNumber) && canMove[3])
+        {
+            transform.position += new Vector3(0, -1, 0) * speed * Time.deltaTime;
+            canMove[0] = true;
+            canMove[1] = true;
+            canMove[2] = true;
+        }
+        else if (XCI.GetDPad(XboxDPad.Left, PlayerNumber) && canMove[0])
+        {
+            transform.position += new Vector3(-1, 0, 0) * speed * Time.deltaTime;
+            canMove[1] = true;
+            canMove[2] = true;
+            canMove[3] = true;
+        }
+        else if (XCI.GetDPad(XboxDPad.Right, PlayerNumber) && canMove[1])
+        {
+            transform.position += new Vector3(1, 0, 0) * speed * Time.deltaTime;
+            canMove[0] = true;
+            canMove[2] = true;
+            canMove[3] = true;
+        }
+
+        //Debug mode
         //Player 1 controls
         if (PlayerNumber == 1) {
 			if (Input.GetButton ("Player1Up") && canMove[2]){
@@ -81,6 +113,72 @@ public class PlayerMovement : MonoBehaviour {
                 canMove[3] = true;
             }
             else if (Input.GetButton("Player2Right") && canMove[1])
+            {
+                transform.position += new Vector3(1, 0, 0) * speed * Time.deltaTime;
+                canMove[0] = true;
+                canMove[2] = true;
+                canMove[3] = true;
+            }
+        }
+
+        //Player 3 controls
+        if (PlayerNumber == 3)
+        {
+            if (Input.GetButton("Player3Up") && canMove[2])
+            {
+                transform.position += new Vector3(0, 1, 0) * speed * Time.deltaTime;
+                canMove[0] = true;
+                canMove[1] = true;
+                canMove[3] = true;
+            }
+            else if (Input.GetButton("Player3Down") && canMove[3])
+            {
+                transform.position += new Vector3(0, -1, 0) * speed * Time.deltaTime;
+                canMove[0] = true;
+                canMove[1] = true;
+                canMove[2] = true;
+            }
+            else if (Input.GetButton("Player3Left") && canMove[0])
+            {
+                transform.position += new Vector3(-1, 0, 0) * speed * Time.deltaTime;
+                canMove[1] = true;
+                canMove[2] = true;
+                canMove[3] = true;
+            }
+            else if (Input.GetButton("Player3Right") && canMove[1])
+            {
+                transform.position += new Vector3(1, 0, 0) * speed * Time.deltaTime;
+                canMove[0] = true;
+                canMove[2] = true;
+                canMove[3] = true;
+            }
+        }
+
+        //Player 4 controls
+        if (PlayerNumber == 4)
+        {
+            if (Input.GetButton("Player4Up") && canMove[2])
+            {
+                transform.position += new Vector3(0, 1, 0) * speed * Time.deltaTime;
+                canMove[0] = true;
+                canMove[1] = true;
+                canMove[3] = true;
+            }
+            else if (Input.GetButton("Player4Down") && canMove[3])
+            {
+                transform.position += new Vector3(0, -1, 0) * speed * Time.deltaTime;
+                canMove[0] = true;
+                canMove[1] = true;
+                canMove[2] = true;
+            }
+            else if (Input.GetButton("Player4Left") && canMove[0])
+            {
+                transform.position += new Vector3(-1, 0, 0) * speed * Time.deltaTime;
+                canMove[1] = true;
+                canMove[2] = true;
+                canMove[3] = true;
+            }
+            else if (Input.GetButton("Player4Right") && canMove[1])
             {
                 transform.position += new Vector3(1, 0, 0) * speed * Time.deltaTime;
                 canMove[0] = true;
