@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour {
     public float normalSpeed = 5f;
     public float angle;
     bool[] canMove; //[left,right,up,down]
-    bool wasSeen;
+    public bool wasSeen;
     public float cooldownTimeSecs = 2;
     float timeStamp;
 

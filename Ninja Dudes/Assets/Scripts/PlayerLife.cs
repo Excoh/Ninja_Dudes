@@ -34,6 +34,7 @@ public class PlayerLife : MonoBehaviour
             {
                 this.gameObject.GetComponent<Renderer>().enabled = false;
                 this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+                this.gameObject.GetComponent<PlayerMovement>().wasSeen = false;
 
                 timeStamp = Time.time + respawnTime;
                 waitingForRespawn = true;
