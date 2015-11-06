@@ -22,7 +22,7 @@ public class PlayerScore2Manager : MonoBehaviour {
             score = 0;
         }
 
-        text.text = "Player 2:" + score;
+        text.text = "2\n" + score;
 	}
     public void AddPoints(int pointsToAdd)
     {

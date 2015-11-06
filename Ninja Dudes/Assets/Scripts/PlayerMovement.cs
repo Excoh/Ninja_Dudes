@@ -5,13 +5,13 @@ using XboxCtrlrInput;
 public class PlayerMovement : MonoBehaviour {
 
 	public int PlayerNumber;
-	private float speed = 5f;
-    public float reducedSpeed = 2f;
-    public float normalSpeed = 5f;
+	private float speed;
+    public float reducedSpeed;
+    public float normalSpeed;
     public float angle;
     bool[] canMove; //[left,right,up,down]
     public bool wasSeen;
-    public float cooldownTimeSecs = 2;
+    public float cooldownTimeSecs;
     float timeStamp;
 
     // Use this for initialization

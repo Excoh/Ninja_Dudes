@@ -24,7 +24,7 @@ public class PlayerScore1Manager : MonoBehaviour
             score = 0;
         }
 
-        text.text = "Player 1:" + score;
+        text.text = "1\n" + score;
 
     }
 

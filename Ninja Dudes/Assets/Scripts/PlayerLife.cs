@@ -29,12 +29,14 @@ public class PlayerLife : MonoBehaviour
     {
         if (killed)
         {
+            
             //**CHANGE: Check if the player already isn't waiting to respawn. Add the points and continue.
             if (!waitingForRespawn)
             {
-                this.gameObject.GetComponent<Renderer>().enabled = false;
+                this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
                 this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
                 this.gameObject.GetComponent<PlayerMovement>().wasSeen = false;
+                this.gameObject.transform.position = new Vector3(0,0,10);
 
                 timeStamp = Time.time + respawnTime;
                 waitingForRespawn = true;
