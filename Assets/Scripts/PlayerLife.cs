@@ -54,12 +54,12 @@ public class PlayerLife : MonoBehaviour
                 gameObject.transform.position = respawnPosition[randNum].transform.position;
 
                 //** CHANGE: Render the sprite and make the player invincible.
-                this.gameObject.GetComponent<Renderer>().enabled = true;
+                this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
                 this.gameObject.GetComponent<CircleCollider2D>().enabled = true;
+                this.gameObject.GetComponent<PlayerMovement>().SendMessage("Start");
 
                 waitingForRespawn = false; //Reset respawn variable and set invincible variable
                 isInvincible = true;
-                Debug.Log("INVINCIBLE");
                 timeStamp = Time.time + invincibilityDuration; //Set timer for invincibility
                 //---------------------------------------
 
@@ -90,7 +90,7 @@ public class PlayerLife : MonoBehaviour
     {
         if (Time.time - flashTimeStamp > timePerFlash)
         {
-            Renderer renderer = this.gameObject.GetComponent<Renderer>();
+            Renderer renderer = this.gameObject.GetComponent<SpriteRenderer>();
             if (renderer.material.color == flashColor)
             {
                 renderer.material.color = Color.white;

@@ -21,6 +21,11 @@ public class PlayerScore2Manager : MonoBehaviour {
         {
             score = 0;
         }
+        //Win State
+        if (score >= 10)
+        {
+            GameObject.Find("GameManager").SendMessage("WinState", 2);
+        }
 
         text.text = "2\n" + score;
 	}

@@ -6,6 +6,8 @@ public class MatchStarter : MonoBehaviour {
 
     public GameObject[] players;
     public GameObject isAllReady;
+    public AudioClip startSound;
+
 	// Use this for initialization
 	void Start () {
         isAllReady.SetActive(false);

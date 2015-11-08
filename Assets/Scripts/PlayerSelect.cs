@@ -9,6 +9,9 @@ public class PlayerSelect : MonoBehaviour {
     public GameObject[] images;
     public GameObject isReadyText;
     public bool isReady;
+
+    public AudioClip readySound;
+    public AudioClip backSound;
 	// Use this for initialization
 	void Start () {
         isReady = false;

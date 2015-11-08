@@ -6,7 +6,7 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 	<RootNamespace></RootNamespace>
-	<ProjectGuid>{727E34BA-6A72-B894-938B-8298CFF56B7B}</ProjectGuid>
+	<ProjectGuid>{08F90C3B-85DA-2F56-94D8-4831CE7FD3BB}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -46,6 +46,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Xbox Controller Plugin\Editor\XboxCtrlrInput\InputManagerReplacer.cs" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -61,8 +64,11 @@
  <Reference Include="UnityEditor.Networking">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
  <Reference Include="XInputDotNetPure">
- <HintPath>C:/Users/Eric/Documents/GitHub/Ninja_Dudes/Ninja Dudes/Assets/Xbox Controller Plugin/Plugins/x86_64/XInputDotNetPure.dll</HintPath>
+ <HintPath>C:/Users/Eric/Documents/GitHub/Ninja_Dudes/Assets/Xbox Controller Plugin/Plugins/x86_64/XInputDotNetPure.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -106,7 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{E4242D11-0FDC-4CF9-61E7-10BB503C0ECC}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{0DC62032-0F52-A358-35F0-4D9CD98A2DA0}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -6,7 +6,7 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 	<RootNamespace></RootNamespace>
-	<ProjectGuid>{E4242D11-0FDC-4CF9-61E7-10BB503C0ECC}</ProjectGuid>
+	<ProjectGuid>{0DC62032-0F52-A358-35F0-4D9CD98A2DA0}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\MusicSingleton.cs" />
+     <Compile Include="Assets\PlayerAvatar.cs" />
      <Compile Include="Assets\Scripts\FieldOfView2D\Scripts\FOV2DEyes.cs" />
      <Compile Include="Assets\Scripts\FieldOfView2D\Scripts\FOV2DVisionCone.cs" />
      <Compile Include="Assets\Scripts\FieldOfView2D\Scripts\SampleScript\GuardSample.cs" />
@@ -68,14 +69,20 @@
      <Compile Include="Assets\Xbox Controller Plugin\XboxCtrlrInput\Example\Test Level Scripts\MoveLaser.cs" />
      <Compile Include="Assets\Xbox Controller Plugin\XboxCtrlrInput\Example\Test Level Scripts\MovePlayer.cs" />
      <Compile Include="Assets\Xbox Controller Plugin\XboxCtrlrInput\XboxCtrlrInput.cs" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
  <Reference Include="XInputDotNetPure">
- <HintPath>C:/Users/Eric/Documents/GitHub/Ninja_Dudes/Ninja Dudes/Assets/Xbox Controller Plugin/Plugins/x86_64/XInputDotNetPure.dll</HintPath>
+ <HintPath>C:/Users/Eric/Documents/GitHub/Ninja_Dudes/Assets/Xbox Controller Plugin/Plugins/x86_64/XInputDotNetPure.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>D:/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
