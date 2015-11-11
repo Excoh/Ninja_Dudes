@@ -830,7 +830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &90133367
 Transform:
   m_ObjectHideFlags: 0
@@ -5948,7 +5948,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: First to 10 points win!
+  m_Text: First to 10 points wins!
 --- !u!222 &1687705466
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6256,7 +6256,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 161398, guid: 03130e8d366b55141886c77823bcc621, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 03130e8d366b55141886c77823bcc621, type: 2}
